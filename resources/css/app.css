@@ -166,6 +166,21 @@
     .field-control option {
         @apply bg-ink-800 text-ink-50;
     }
+    /*
+     * <select> ships its own native chrome on top of the box model, so the
+     * same padding as a text <input> still renders taller in most browsers.
+     * Stripping that chrome and drawing our own chevron is what actually
+     * equalizes the two heights, not more padding tweaks.
+     */
+    .field-select {
+        -webkit-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%2394a3b8' stroke-width='1.6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 0.75rem center;
+        background-size: 0.85rem;
+        padding-right: 2.25rem;
+    }
 
     /* Range slider — plain, standard look ------------------------ */
     .slider {

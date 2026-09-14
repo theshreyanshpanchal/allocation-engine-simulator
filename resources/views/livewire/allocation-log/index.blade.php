@@ -10,7 +10,7 @@
     <div class="mb-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         <label class="block">
             <span class="field-label">Product</span>
-            <select wire:model.live="productId" class="field-control">
+            <select wire:model.live="productId" class="field-control field-select">
                 <option value="">All products</option>
                 @foreach ($this->products as $product)
                     <option value="{{ $product->id }}">{{ $product->name }}</option>
@@ -19,7 +19,7 @@
         </label>
         <label class="block">
             <span class="field-label">Winner</span>
-            <select wire:model.live="winnerStoreId" class="field-control">
+            <select wire:model.live="winnerStoreId" class="field-control field-select">
                 <option value="">Any winner</option>
                 @foreach ($this->stores as $store)
                     <option value="{{ $store->id }}">{{ $store->name }}</option>
@@ -28,7 +28,7 @@
         </label>
         <label class="block">
             <span class="field-label">Involved store</span>
-            <select wire:model.live="involvedStoreId" class="field-control">
+            <select wire:model.live="involvedStoreId" class="field-control field-select">
                 <option value="">Any store</option>
                 @foreach ($this->stores as $store)
                     <option value="{{ $store->id }}">{{ $store->name }}</option>
@@ -37,7 +37,7 @@
         </label>
         <label class="block">
             <span class="field-label">Tolerance</span>
-            <select wire:model.live="tolerance" class="field-control">
+            <select wire:model.live="tolerance" class="field-control field-select">
                 <option value="">Any tolerance</option>
                 @foreach ($this->tolerances as $value)
                     <option value="{{ $value }}">{{ num($value) }}%</option>

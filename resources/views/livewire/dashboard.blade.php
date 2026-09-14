@@ -11,7 +11,7 @@
     <div class="grid gap-4 sm:grid-cols-2">
         <label class="block">
             <span class="field-label">Selected product</span>
-            <select wire:model.live="productId" class="field-control">
+            <select wire:model.live="productId" class="field-control field-select">
                 @foreach ($this->products as $option)
                     <option value="{{ $option->id }}">{{ $option->name }} — {{ $option->vehicle_label }}</option>
                 @endforeach
