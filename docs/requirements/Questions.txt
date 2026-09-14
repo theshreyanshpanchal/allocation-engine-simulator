@@ -1,0 +1,20 @@
+(1) What if new seller is just registered and at this point of time they will not have anything like operational score and all so what about this case?
+
+(2) Known open question
+The requirements say sellers define and price kits, while normal listings and prices come through the Hub. The source
+explicitly asks: where exactly is a seller kit defined and priced? This needs client clarification.
+
+(3) Readiness checklist
+Before integration is ready, demonstrate seller setup, health checks, reliable product/stock/price updates, listing
+lifecycle, taxonomy access, clear rejection reasons, complete order submission, buyer-facing order/invoice/shipping
+updates, and no direct seller-ERP access.
+
+(4) What exact price tolerance should be used for the price safeguard? This is a client configuration decision
+and is not required before building the simulator
+
+
+(5) Real seller feeds may create a large moderation workload. Matching rules should be calibrated against real
+seller data. (Also if the data size is very large with verios stores then this algorithem will take time)
+
+(6) The chosen payment provider must confirm which payment methods can split money immediately in Brazil.
+
