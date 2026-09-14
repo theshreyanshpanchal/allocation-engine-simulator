@@ -257,8 +257,9 @@
                         <dd class="font-medium text-ink-50">{{ $featured?->storeName ?? '—' }}</dd>
                     </div>
                 </dl>
-                <button type="button" wire:click="reevaluate" class="btn-secondary btn-sm mt-3">
-                    Reload / Re-evaluate
+                <button type="button" wire:click="reevaluate" wire:loading.attr="disabled" wire:target="reevaluate" class="btn-secondary btn-sm mt-3">
+                    <span wire:loading.remove wire:target="reevaluate">Reload / Re-evaluate</span>
+                    <span wire:loading wire:target="reevaluate">Re-evaluating…</span>
                 </button>
                 <p class="mt-2 text-xs leading-relaxed text-ink-300">
                     <span class="font-semibold text-ink-200">What this does:</span>
